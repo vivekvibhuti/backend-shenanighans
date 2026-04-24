@@ -1,14 +1,13 @@
 .PHONY: help build run clean test lint fmt vet tidy deps migrate docker-build
 
 # Binary name
-BINARY_NAME=mad2_hms
+BINARY_NAME=api
 BINARY_DIR=bin
-MAIN_PATH=cmd/api
+MAIN_PATH=./cmd/api
 
 # Go commands
 GO=go
 GOCACHE=$(shell $(GO) env GOCACHE)
-GOMODCACHE=$(shell $(GO) env GOMODCACHE)
 
 help: ## Show this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
